@@ -16,6 +16,11 @@
 		A8AB4820165DF9CC0025E9A9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB481F165DF9CC0025E9A9 /* Default.png */; };
 		A8AB4822165DF9CC0025E9A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB4821165DF9CC0025E9A9 /* Default@2x.png */; };
 		A8AB4824165DF9CC0025E9A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB4823165DF9CC0025E9A9 /* Default-568h@2x.png */; };
+		A8AB482C165DF9E40025E9A9 /* navigation_bar_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB482A165DF9E40025E9A9 /* navigation_bar_texture.png */; };
+		A8AB482D165DF9E40025E9A9 /* navigation_bar_texture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AB482B165DF9E40025E9A9 /* navigation_bar_texture@2x.png */; };
+		A8AB4830165DFA210025E9A9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AB482F165DFA210025E9A9 /* MainViewController.m */; };
+		A8AB4833165DFA320025E9A9 /* MagicView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AB4832165DFA320025E9A9 /* MagicView.m */; };
+		A8AB4835165DFB700025E9A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AB4834165DFB700025E9A9 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,13 @@
 		A8AB481F165DF9CC0025E9A9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A8AB4821165DF9CC0025E9A9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A8AB4823165DF9CC0025E9A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A8AB482A165DF9E40025E9A9 /* navigation_bar_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_texture.png; sourceTree = "<group>"; };
+		A8AB482B165DF9E40025E9A9 /* navigation_bar_texture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_bar_texture@2x.png"; sourceTree = "<group>"; };
+		A8AB482E165DFA210025E9A9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A8AB482F165DFA210025E9A9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A8AB4831165DFA320025E9A9 /* MagicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicView.h; sourceTree = "<group>"; };
+		A8AB4832165DFA320025E9A9 /* MagicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicView.m; sourceTree = "<group>"; };
+		A8AB4834165DFB700025E9A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AB4835165DFB700025E9A9 /* QuartzCore.framework in Frameworks */,
 				A8AB480E165DF9CC0025E9A9 /* UIKit.framework in Frameworks */,
 				A8AB4810165DF9CC0025E9A9 /* Foundation.framework in Frameworks */,
 				A8AB4812165DF9CC0025E9A9 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +81,7 @@
 		A8AB480C165DF9CC0025E9A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8AB4834165DFB700025E9A9 /* QuartzCore.framework */,
 				A8AB480D165DF9CC0025E9A9 /* UIKit.framework */,
 				A8AB480F165DF9CC0025E9A9 /* Foundation.framework */,
 				A8AB4811165DF9CC0025E9A9 /* CoreGraphics.framework */,
@@ -80,6 +94,10 @@
 			children = (
 				A8AB481C165DF9CC0025E9A9 /* AppDelegate.h */,
 				A8AB481D165DF9CC0025E9A9 /* AppDelegate.m */,
+				A8AB482E165DFA210025E9A9 /* MainViewController.h */,
+				A8AB482F165DFA210025E9A9 /* MainViewController.m */,
+				A8AB4831165DFA320025E9A9 /* MagicView.h */,
+				A8AB4832165DFA320025E9A9 /* MagicView.m */,
 				A8AB4814165DF9CC0025E9A9 /* Supporting Files */,
 			);
 			path = MagicTabsObjC;
@@ -88,6 +106,8 @@
 		A8AB4814165DF9CC0025E9A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8AB482A165DF9E40025E9A9 /* navigation_bar_texture.png */,
+				A8AB482B165DF9E40025E9A9 /* navigation_bar_texture@2x.png */,
 				A8AB4815165DF9CC0025E9A9 /* MagicTabsObjC-Info.plist */,
 				A8AB4816165DF9CC0025E9A9 /* InfoPlist.strings */,
 				A8AB4819165DF9CC0025E9A9 /* main.m */,
@@ -154,6 +174,8 @@
 				A8AB4820165DF9CC0025E9A9 /* Default.png in Resources */,
 				A8AB4822165DF9CC0025E9A9 /* Default@2x.png in Resources */,
 				A8AB4824165DF9CC0025E9A9 /* Default-568h@2x.png in Resources */,
+				A8AB482C165DF9E40025E9A9 /* navigation_bar_texture.png in Resources */,
+				A8AB482D165DF9E40025E9A9 /* navigation_bar_texture@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +188,8 @@
 			files = (
 				A8AB481A165DF9CC0025E9A9 /* main.m in Sources */,
 				A8AB481E165DF9CC0025E9A9 /* AppDelegate.m in Sources */,
+				A8AB4830165DFA210025E9A9 /* MainViewController.m in Sources */,
+				A8AB4833165DFA320025E9A9 /* MagicView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
