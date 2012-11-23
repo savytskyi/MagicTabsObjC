@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+//#import <QuartzCore/QuartzCore.h>
 
 #define kSpacer 50
 
@@ -23,5 +23,8 @@
 
 @property (readwrite, nonatomic) NSInteger zIndex;
 @property (readonly, nonatomic) CGRect firstPosition;
+
+- (void) setViewTitle:(NSString *)title;
+- (void) setContentView:(UIView *)newContentView;
 
 @end

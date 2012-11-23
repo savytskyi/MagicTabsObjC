@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MagicView.h"
 
-@interface MainViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDataSource, UICollectionViewDelegate>
+@interface MainViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -18,7 +18,7 @@
         
         _firstPosition = frame;
         [self setClipsToBounds:YES];
-        [[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
+        /*[[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
         [[self layer] setShadowOffset:CGSizeMake(10, 10)];
         [[self layer] setShadowOpacity:0.5f];
         [[self layer] setShadowRadius:10.0f];
@@ -27,7 +27,7 @@
         [[self layer] setBorderWidth:1.0f];
         
         [[self layer] setCornerRadius:3.0f];
-        
+        */
         // setting up nav bar and view title
         navigationBarView = [[UIView alloc] initWithFrame:
                              CGRectMake(0, 0, [self frame].size.width, 44)];
@@ -55,8 +55,22 @@
 }
 
 - (void) springBack {
+    if ([self frame].origin.y == _firstPosition.origin.y &&
+        [self frame].size.width == _firstPosition.size.width) return;
+    
     [UIView animateWithDuration:0.2f animations:^(void) {
         [self setFrame:_firstPosition];
+        if ([navigationBarView frame].size.width != _firstPosition.size.width) {
+            CGRect navFrame = [navigationBarView frame];
+            navFrame.size.width = _firstPosition.size.width;
+            //navFrame.origin.x = 0;
+            [navigationBarView setFrame:navFrame];
+            
+            CGRect contentFrame = [contentView frame];
+            contentFrame.size.width = _firstPosition.size.width;
+            [contentView setFrame:contentFrame];
+        }
+        
     }];
     
     NSArray *magicViews = [self getMagicViewsFrom:[self superview]];
@@ -160,6 +174,12 @@
         }
     }
     return magicViews;
+}
+
+- (void) setContentView:(UIView *)newContentView {
+    [newContentView setFrame:CGRectMake(0, [navigationBarView frame].size.height, [self frame].size.width, [self frame].size.height - [navigationBarView frame].size.height)];
+    contentView = newContentView;
+    [self addSubview:contentView];
 }
 
 @end
