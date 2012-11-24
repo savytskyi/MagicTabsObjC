@@ -18,7 +18,9 @@
         
         _firstPosition = frame;
         [self setClipsToBounds:YES];
-        /*[[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
+        
+        // it's a bit buggy with quartzCore features now, so it was disabled for some time
+        [[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
         [[self layer] setShadowOffset:CGSizeMake(10, 10)];
         [[self layer] setShadowOpacity:0.5f];
         [[self layer] setShadowRadius:10.0f];
@@ -27,7 +29,7 @@
         [[self layer] setBorderWidth:1.0f];
         
         [[self layer] setCornerRadius:3.0f];
-        */
+        
         // setting up nav bar and view title
         navigationBarView = [[UIView alloc] initWithFrame:
                              CGRectMake(0, 0, [self frame].size.width, 44)];

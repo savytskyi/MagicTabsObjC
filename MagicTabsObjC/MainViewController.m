@@ -24,7 +24,7 @@
         CGFloat tabWidth = [[self view] frame].size.width * 0.9f;
         
         //difference between each tab width
-        CGFloat tabWidthSpacer = 6;
+        CGFloat tabWidthSpacer = 5;
         CGFloat pointX = ([[self view] frame].size.width - tabWidth) / 2;
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
         
