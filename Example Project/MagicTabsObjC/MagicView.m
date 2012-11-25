@@ -16,9 +16,6 @@
     if (self) {
         // Initialization code
         
-        
-        
-        
         _firstPosition = frame;
         [self setClipsToBounds:YES];
         
@@ -61,12 +58,9 @@
         if ([navigationBarView frame].size.width != _firstPosition.size.width) {
             CGRect navFrame = [navigationBarView frame];
             navFrame.size.width = _firstPosition.size.width;
-            //navFrame.origin.x = 0;
             [navigationBarView setFrame:navFrame];
             
-            CGRect contentFrame = [contentView frame];
-            contentFrame.size.width = _firstPosition.size.width;
-            [contentView setFrame:contentFrame];
+            [contentView setFrame:contentViewFirstPosition];
         }
         
     }];
@@ -84,7 +78,9 @@
         [navigationBarView setFrame:CGRectMake(0, 0, [self frame].size.width, 44)];
         
         CGRect newContentFrame = [contentView frame];
-        newContentFrame.size.width = [self frame].size.width;
+        
+        CGFloat border = (_firstPosition.size.width - contentViewFirstPosition.size.width);
+        newContentFrame.size.width = [self frame].size.width - border;
         [contentView setFrame:newContentFrame];
     } completion:^(BOOL finished) {
         [self hideOtherViews];
@@ -105,7 +101,7 @@
         [navigationBarView setFrame:CGRectMake(0, 0, newFrame.size.width, 44)];
         
         CGRect newContentFrame = [contentView frame];
-        newContentFrame.size.width = newFrame.size.width;
+        newContentFrame.size.width -= 2;
         [contentView setFrame:newContentFrame];
     }
     
@@ -174,7 +170,11 @@
 }
 
 - (void) setContentView:(UIView *)newContentView {
-    [newContentView setFrame:CGRectMake(0, [navigationBarView frame].size.height, [self frame].size.width, [self frame].size.height - [navigationBarView frame].size.height)];
+    CGRect newFrame = [newContentView frame];
+    newFrame.origin.y += [navigationBarView frame].size.height;
+    newFrame.size.height -= [navigationBarView frame].size.height;
+    contentViewFirstPosition = newFrame;
+    [newContentView setFrame:newFrame];
     contentView = newContentView;
     [self addSubview:contentView];
 }

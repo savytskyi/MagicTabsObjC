@@ -17,6 +17,7 @@
     
     UINavigationBar *navigationBarView;
     UIView *contentView;
+    CGRect contentViewFirstPosition;
 
 }
 

@@ -28,9 +28,7 @@ Now we can add each tab's title and content views. You can use any UIView for a 
 	[magicView1 setViewTitle:@"Cool Title"];
 	
 	//adding tableView as a content
-	CGRect magicFrame = [magicView3 frame];
-	//every magic tab has a title, so we can substract its height from a contentView
-    magicFrame.size.height -= 44;
+	CGRect magicFrame = CGRectMake(0, 0, [magicTab frame].size.width, [magicTab frame].size.height);
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:magicFrame];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellReuseID"];
