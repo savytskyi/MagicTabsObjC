@@ -98,7 +98,8 @@
 
 - (void) handlePanGesture:(UIPanGestureRecognizer *)gesture {
     int pointY = [gesture translationInView:[[self superview] superview]].y;
-    if (pointY < 0 && mainView) return;
+    if ((pointY < 0 && mainView) || pointY == 0) return;
+    
     
     CGRect newFrame = [self frame];
     newFrame.origin.y += pointY;
@@ -114,6 +115,7 @@
         newContentFrame.size.width = newFrame.size.width;
         [contentView setFrame:newContentFrame];
     }
+    
     [self setFrame:newFrame];
     
     if (pointY > 0 && mainView) mainView = NO;
