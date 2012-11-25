@@ -19,16 +19,17 @@
         _firstPosition = frame;
         [self setClipsToBounds:YES];
         
-        // it's a bit buggy with quartzCore features now, so it was disabled for some time
-        [[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
+        // it's a bit buggy&slow with quartzCore features now, so it was disabled for some time
+        /*[[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
         [[self layer] setShadowOffset:CGSizeMake(10, 10)];
         [[self layer] setShadowOpacity:0.5f];
         [[self layer] setShadowRadius:10.0f];
-        
+        */
         [[self layer] setBorderColor:[[UIColor blackColor] CGColor]];
         [[self layer] setBorderWidth:1.0f];
         
         [[self layer] setCornerRadius:3.0f];
+        
         
         // setting up nav bar and view title
         navigationBarView = [[UIView alloc] initWithFrame:
@@ -98,7 +99,7 @@
 
 - (void) handlePanGesture:(UIPanGestureRecognizer *)gesture {
     int pointY = [gesture translationInView:[[self superview] superview]].y;
-    if ((pointY < 0 && mainView) || pointY == 0) return;
+    if (pointY < 0 && mainView) return;
     
     
     CGRect newFrame = [self frame];
