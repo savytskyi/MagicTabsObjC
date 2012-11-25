@@ -2,7 +2,7 @@
 
 Available on [Objective-C](https://github.com/savytskyi/MagicTabsObjC) and [RubyMotion](https://github.com/savytskyi/magic_tabs_rubymotion)
 
-![MagicTabs screenshot](https://raw.github.com/savytskyi/MagicTabsObjC/master/magicTabs.jpg)
+![MagicTabs screenshot](http://raw.github.com/savytskyi/MagicTabsObjC/master/Example%20Project/magicTabs.jpg)
 
 #How to use
 
@@ -21,7 +21,7 @@ Now we need to assign z index to our tabs:
 
 	[magicTab setZIndex:1];
 	
-![MagicTabs sizes](https://raw.github.com/savytskyi/MagicTabsObjC/master/sizes.jpg)
+![MagicTabs sizes](https://raw.github.com/savytskyi/MagicTabsObjC/master/Example%20Project/sizes.jpg)
 
 Now we can add each tab's title and content views. You can use any UIView for a content, but it would be great if its frame will be equal to magicTab's frame.
 
