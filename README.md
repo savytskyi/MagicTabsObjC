@@ -2,7 +2,7 @@
 
 Available on [Objective-C](https://github.com/savytskyi/MagicTabsObjC) and [RubyMotion](https://github.com/savytskyi/magic_tabs_rubymotion)
 
-![MagicTabs screenshot](http://raw.github.com/savytskyi/MagicTabsObjC/master/Example%20Project/magicTabs.jpg)
+![MagicTabs screenshot](https://raw.github.com/savytskyi/MagicTabsObjC/master/Example%20Project/magicTabs.jpg)
 
 #How to use
 
